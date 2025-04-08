@@ -9,8 +9,9 @@
         { "src": "/(.*)", "dest": "/api/index.php" }
     ],
     "public": true,
-    "buildCommand": "vite build",
+    "buildCommand": "npm run build && php artisan config:cache && php artisan view:cache && php artisan route:cache",
     "outputDirectory": "public",
+    "ignoreCommand": "false",
     "env": {
         "APP_ENV": "production",
         "APP_DEBUG": "false",
@@ -32,4 +33,5 @@
         "DB_USERNAME": "root",
         "DB_PASSWORD": "vGyxcmGpDyrbAlxQVpNdFciMLkpDDZod"
     }
+    
 }
